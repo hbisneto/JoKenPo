@@ -8,7 +8,9 @@ try:
    ## Local Libraries
    from ErrorReport import ErrorList
 except:
-   ErrorList.ImportLib()
+   Separator = "="*80
+   Message = ">> Couldn`t Import Libraries:\n>> Check if the libraries are installed and run the program again."
+   raise RuntimeError("\n\n\n" + Separator + "\n" + Message + "\n" + Separator)
 
 def Main():
    Platform = platform

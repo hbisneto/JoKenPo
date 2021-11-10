@@ -1,11 +1,11 @@
 ﻿## SystemRequirements File
-## This file is used to check if system matches with the minimum requirements to run
+## This file is used to check if system matches with the minimum requirements to run.
 
-from ErrorReport import ErrorList
 import sys
+from ErrorReport import ErrorList
 
 ## Change "Require" to "False" to skip system check
-Require = False
+Require = True
 ## Change "Require" to "True" to allow system check
 
 if Require == True:
@@ -22,13 +22,16 @@ if Require == True:
    BuildVersion = sys.version_info[2]
    CurrentVersion = f'{MajorVersion}.{MinorVersion}.{BuildVersion}'
    ## Current System
-
+   
    ## Uncomment to see information about your system
    ## print(f'>> My system current version: Python {CurrentVersion}')
    ## print(f'>> Required version to run: Python {TargetVersion}')
 
    if TargetVersion > CurrentVersion:
-      ErrorList.Requirements().MajorVersion(CurrentVersion, TargetVersion, TargetMajor)
+      if CurrentVersion == "3.10.0":
+         ErrorList.Raise().Requirements().MinorVersion(CurrentVersion, TargetVersion, TargetMinor)
+      else:   
+         ErrorList.Raise().Requirements().MajorVersion(CurrentVersion, TargetVersion, TargetMajor)
    elif TargetVersion < CurrentVersion:
-      ErrorList.Requirements().MinorVersion(CurrentVersion, TargetVersion, TargetMinor)
+      ErrorList.Raise().Requirements().MinorVersion(CurrentVersion, TargetVersion, TargetMinor)
 

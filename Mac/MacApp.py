@@ -1,9 +1,9 @@
 ﻿## MacApp File
 ## This file is used to implement code used to run scripts for Mac
 
+import random
 from ErrorReport import ErrorList
 from Mac import Score
-import random
 
 def Start():
     print("="*80)

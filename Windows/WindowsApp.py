@@ -1,9 +1,9 @@
 ﻿## WindowsApp File
 ## This file is used to implement code used to run scripts for Windows
 
+import random
 from ErrorReport import ErrorList
 from Windows import Score
-import random
 
 def Start():
     print("="*80)

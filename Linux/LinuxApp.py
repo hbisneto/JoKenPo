@@ -1,9 +1,9 @@
 ﻿## LinuxApp File
 ## This file is used to implement code used to run scripts for Linux
 
+import random
 from ErrorReport import ErrorList
 from Linux import Score
-import random
 
 def Start():
     print("="*80)
