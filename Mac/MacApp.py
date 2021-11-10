@@ -11,73 +11,73 @@ def Start():
     print("="*80)
     print(">> JoKenPô <<")
     print("="*80)
-    print("[0] - Pedra")
-    print("[1] - Papel")
-    print("[2] - Tesoura")
+    print("[0] - Rock")
+    print("[1] - Paper")
+    print("[2] - Scissors")
     print("="*80)
-    P1 = int(input(">> Escolha uma opção para jogar: "))
+    P1 = int(input(">> Choose an option to play: "))
     CPU = random.randint(0,2)
     print("="*80)
 
     if P1 == 0:
-        print(">> Você escolheu: Pedra")
+        print(">> You chose: Rock")
         if CPU == 0:
-            print(">> CPU escolheu: Pedra")
-            print(">> Empate: Não há ganhadores!")
+            print(">> CPU chose: Rock")
+            print(">> Draw: The game is tied!")
             Score.Game_Draws += 1
         elif CPU == 1:
-            print(">> CPU escolheu: Papel")
-            print(">> CPU venceu!")
+            print(">> CPU chose: Paper")
+            print(">> CPU wins!")
             Score.CPU_Wins += 1
         elif CPU == 2:
-            print(">> CPU escolheu: Tesoura")
-            print(">> Você venceu!")
+            print(">> CPU chose: Scissors")
+            print(">> You win!")
             Score.P1_Wins += 1
         else:
-            print("Opção inválida")
+            print(">> Invalid option")
 
     if P1 == 1:
-        print(">> Você escolheu: Papel")
+        print(">> You chose: Paper")
         if CPU == 0:
-            print(">> CPU escolheu: Pedra")
-            print(">> Você venceu!")
+            print(">> CPU chose: Rock")
+            print(">> You win!")
             Score.P1_Wins += 1
         elif CPU == 1:
-            print(">> CPU escolheu: Papel")
-            print(">> Empate: Não há ganhadores!")
+            print(">> CPU chose: Paper")
+            print(">> Draw: The game is tied!")
             Score.Game_Draws += 1
         elif CPU == 2:
-            print(">> CPU escolheu: Tesoura")
-            print(">> CPU venceu!")
+            print(">> CPU chose: Scissors")
+            print(">> CPU win!")
             Score.CPU_Wins += 1
         else:
-            print("Opção inválida")
+            print(">> Invalid option")
             
     if P1 == 2:
-        print(">> Você escolheu: Tesoura")
+        print(">> You chose: Scissors")
         if CPU == 0:
-            print(">> CPU escolheu: Pedra")
-            print(">> CPU venceu!")
+            print(">> CPU chose: Rock")
+            print(">> CPU win!")
             Score.CPU_Wins += 1
         elif CPU == 1:
-            print(">> CPU escolheu: Papel")
-            print(">> Você venceu!")
+            print(">> CPU chose: Paper")
+            print(">> Você win!")
             Score.P1_Wins += 1
         elif CPU == 2:
-            print(">> CPU escolheu: Tesoura")
-            print(">> Empate: Não há ganhadores!")
+            print(">> CPU chose: Scissors")
+            print(">> Draw: The game is tied!")
             Score.Game_Draws += 1
         else:
-            print("Opção inválida")
+            print(">> Invalid option")
     print("="*80)
 
 def Results():
     print("="*80)
-    print(">> Resultados <<")
+    print(">> Results <<")
     print("="*80)
-    print(f'>> Vitórias [P1]: {Score.P1_Wins} vitória(s)')
-    print(f'>> Vitórias [CPU]: {Score.CPU_Wins} vitória(s)')
-    print(f'>> Total de Empates: {Score.Game_Draws} empate(s)')
+    print(f'>> Wins [P1]: {Score.P1_Wins} Win(s)')
+    print(f'>> Wins [CPU]: {Score.CPU_Wins} Win(s)')
+    print(f'>> Total Draws: {Score.Game_Draws} Draw(s)')
     print("="*80)
 
 def Main():
@@ -87,11 +87,11 @@ def Main():
         print("="*80)
         print(">> Menu <<")
         print("="*80)
-        print(">>[1] - Iniciar Jogo")
-        print(">>[2] - Resultados")
+        print(">>[1] - Start Game")
+        print(">>[2] - Results")
         print("="*80)
 
-        Opc = int(input(">> Insira o número da opção desejada: "))
+        Opc = int(input(">> Type the option number: "))
 
         if Opc == 1:
             Start()
