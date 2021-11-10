@@ -2,11 +2,11 @@
 
 **PyBridge Sample Application:** JoKenPo Game
 
-O jogo permite que o usuário escolha uma jogada. A escolha do computador será determinada pela biblioteca `random`. Depois da escolha das opções, o programa mostra a escolha do usuário, do computador e mostra o vencedor ou se a partida empatou.
+The game allows the user to choose a move. The computer also has a choice that is determined by the random library. After choosing the options, the program shows the choice of the user, the computer, and also the winner or if the game was tied.
 
-O usuário também tem a opção de terminar a contagem de jogos quando a opção `Results` for escolhida no menu. Essa opção mostra o resultado de todos os jogos realizados enquanto o programa estiver em execução.
+The user also has the option to finish counting games when the Results option is chosen from the menu. This option shows the result of all games played while the program is running.
 
-## Menu de opções
+## Options Menu
 
-- **[1] - Iniciar Jogo:** Iniciar a contagem dos jogos
-- **[2] - Resultados:** Para a contagem de jogos e mostra os resultados (Vitórias do usuário, vitórias do computador e empates)
+- **[1] - Start Game:** Start the game
+- **[2] - Results:** Stop the game count and shows the results (User wins, computer wins and draw)
