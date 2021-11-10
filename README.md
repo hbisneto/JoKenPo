@@ -1,6 +1,6 @@
 # JoKenPô
 
-PyBridge Sample Application: JoKenPo Game
+**PyBridge Sample Application:** JoKenPo Game
 
 O jogo permite que o usuário escolha uma jogada. A escolha do computador será determinada pela biblioteca `random`. Depois da escolha das opções, o programa mostra a escolha do usuário, do computador e mostra o vencedor ou se a partida empatou.
 
