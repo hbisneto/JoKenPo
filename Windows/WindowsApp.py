@@ -2,8 +2,8 @@
 ## This file is used to implement code used to run scripts for Windows
 
 import random
-from ErrorReport import ErrorList
-from Windows import Score
+from exception import Exceptions
+from windows import Score
 
 def Start():
     print("="*80)
@@ -11,59 +11,59 @@ def Start():
     print("="*80)
     print(">> JoKenPô <<")
     print("="*80)
-    print("[0] - Rock")
-    print("[1] - Paper")
-    print("[2] - Scissors")
+    print("[1] - Rock")
+    print("[2] - Paper")
+    print("[3] - Scissors")
     print("="*80)
     P1 = int(input(">> Choose an option to play: "))
     CPU = random.randint(0,2)
     print("="*80)
 
-    if P1 == 0:
+    if P1 == 1:
         print(">> You chose: Rock")
-        if CPU == 0:
+        if CPU == 1:
             print(">> CPU chose: Rock")
             print(">> Draw: The game is tied!")
             Score.Game_Draws += 1
-        elif CPU == 1:
+        elif CPU == 2:
             print(">> CPU chose: Paper")
             print(">> CPU wins!")
             Score.CPU_Wins += 1
-        elif CPU == 2:
+        elif CPU == 3:
             print(">> CPU chose: Scissors")
             print(">> You win!")
             Score.P1_Wins += 1
         else:
             print(">> Invalid option")
 
-    if P1 == 1:
+    if P1 == 2:
         print(">> You chose: Paper")
-        if CPU == 0:
+        if CPU == 1:
             print(">> CPU chose: Rock")
             print(">> You win!")
             Score.P1_Wins += 1
-        elif CPU == 1:
+        elif CPU == 2:
             print(">> CPU chose: Paper")
             print(">> Draw: The game is tied!")
             Score.Game_Draws += 1
-        elif CPU == 2:
+        elif CPU == 3:
             print(">> CPU chose: Scissors")
             print(">> CPU win!")
             Score.CPU_Wins += 1
         else:
             print(">> Invalid option")
             
-    if P1 == 2:
+    if P1 == 3:
         print(">> You chose: Scissors")
-        if CPU == 0:
+        if CPU == 1:
             print(">> CPU chose: Rock")
             print(">> CPU win!")
             Score.CPU_Wins += 1
-        elif CPU == 1:
+        elif CPU == 2:
             print(">> CPU chose: Paper")
             print(">> Você win!")
             Score.P1_Wins += 1
-        elif CPU == 2:
+        elif CPU == 3:
             print(">> CPU chose: Scissors")
             print(">> Draw: The game is tied!")
             Score.Game_Draws += 1
@@ -97,6 +97,5 @@ def Main():
             Start()
         else:
             Loop = False
-            Results()
-         
+            Results()    
 Main()

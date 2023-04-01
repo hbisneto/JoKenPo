@@ -19,3 +19,6 @@ Public = f'{User}Public/'
 PyBridgeFolder = f'{Documents}PyBridge/'
 ProjectsRepo = f'{PyBridgeFolder}Projects/'
 PythonExtension = '.py'
+
+## Score Log File
+# Implement a log with game score

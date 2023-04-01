@@ -6,28 +6,26 @@ try:
    from sys import platform
 
    ## Local Libraries
-   from ErrorReport import ErrorList
+   from exception import Exceptions
 except:
-   Separator = "="*80
-   Message = ">> Couldn`t Import Libraries:\n>> Check if the libraries are installed and run the program again."
-   raise RuntimeError("\n\n\n" + Separator + "\n" + Message + "\n" + Separator)
+   raise RuntimeError(">> Could not import library: Check if the libraries are installed and run the program again.")
 
 def Main():
    Platform = platform
 
    ## Linux
    if Platform == "linux" or Platform == "linux2":
-      from Linux import Linux
+      from linux import Linux
       Linux.Linux()
 
    ## Mac
    elif Platform == "darwin":
-      from Mac import Mac
+      from mac import Mac
       Mac.Mac()
 
    ## Windows
    elif Platform == "win32" or Platform == "win64":
-      from Windows import Windows
+      from windows import Windows
       Windows.Windows()
 
 Main()

@@ -1,4 +1,4 @@
-# JoKenPô
+﻿# JoKenPô
 
 **PyBridge Sample Application:** JoKenPo Game
 
@@ -10,3 +10,13 @@ The user also has the option to finish counting games when the `Results` option 
 
 - **[1] - Start Game:** Start the game
 - **[2] - Results:** Stop the game count and shows the results (User wins, computer wins and draw)
+
+## Update log:
+
+```
+New in this version:
+
+- Changed options in menu. Now the options are:
+1 [Rock], 2 [Paper] and 3 [Scissors]
+- Updated project to run according to PyBridge 2.0
+```
